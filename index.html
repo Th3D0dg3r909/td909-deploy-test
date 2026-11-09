@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Een statische testpagina van TD909 Creative Design voor een eerste Hostinger-deploy.">
+  <title>TD909 Deploy Test</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101110;--panel:#171916;--line:#343b30;--accent:#d5fa76;--text:#f4f5ed;--muted:#b5beab}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}
+    .wrap{width:min(1060px,calc(100% - 40px));margin-inline:auto}
+    header,footer{padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    header{border-bottom:1px solid var(--line)}
+    .brand{font-weight:900;letter-spacing:.08em}
+    .label,.edition{font:700 .75rem/1.4 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+    .label{color:var(--accent);margin:0}
+    .edition{color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center;padding:clamp(44px,9vw,108px) 0}
+    h1{font-size:clamp(3rem,9vw,7.25rem);letter-spacing:-.085em;line-height:.95;margin:14px 0 22px}
+    h1 span{display:block;color:var(--accent)}
+    .intro{color:var(--muted);max-width:36ch;margin:0 0 28px}
+    .button{display:inline-block;background:var(--accent);color:var(--bg);padding:11px 18px;font-weight:750;text-decoration:none;border-radius:5px}
+    .button:hover{background:#efffbf}
+    :focus-visible{outline:2px solid white;outline-offset:4px}
+    .mark{position:relative;display:grid;place-items:center;min-height:275px;overflow:hidden;background:repeating-linear-gradient(0deg,transparent 0 23px,#252a22 24px 25px),repeating-linear-gradient(90deg,var(--panel) 0 23px,#252a22 24px 25px);border:1px solid var(--line);border-radius:8px}
+    .mark svg{width:min(70%,220px);height:auto;color:var(--accent)}
+    .mark .edition{position:absolute;right:13px;bottom:10px}
+    .check{border-top:1px solid var(--line);padding:28px 0 32px}
+    .check h2{margin:6px 0 8px;font-size:1.55rem}
+    .check p:last-child{margin:0;color:var(--muted);max-width:64ch}
+    footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+    @media(max-width:650px){.hero{grid-template-columns:1fr;gap:28px}.mark{min-height:190px}.mark svg{width:135px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="brand">TD909 / CREATIVE DESIGN</span>
+      <span class="edition">Test 001</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div>
+          <p class="label">Deploymenttest</p>
+          <h1 id="title">TD909 <span>Deploy Test</span></h1>
+          <p class="intro">Een kleine testsite voor je eerste deployment van GitHub naar Hostinger.</p>
+          <a class="button" href="#controle">Bekijk de testcontrole ↓</a>
+        </div>
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square">
+            <path d="M62 35 28 70l34 35m96-70 34 35-34 35M125 26l-30 88"/>
+            <circle cx="110" cy="70" r="64" stroke-width="1" stroke-dasharray="3 6" opacity=".55"/>
+          </svg>
+          <span class="edition">Build 01</span>
+        </div>
+      </section>
+      <section class="check" id="controle" aria-labelledby="check-title">
+        <p class="label">Controlepunt</p>
+        <h2 id="check-title">Pagina geladen</h2>
+        <p>Zie je deze pagina op je tijdelijke Hostinger-adres? Dan wordt de HTML daar geserveerd. Zie je ook de groene accenten en het raster? Dan wordt de styling toegepast.</p>
+      </section>
+    </main>
+    <footer><span>TD909 Creative Design</span><span class="edition">Statische HTML &amp; CSS</span></footer>
+  </div>
+</body>
+</html>
