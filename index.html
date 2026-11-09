@@ -1,67 +1,107 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Een statische testpagina van TD909 Creative Design voor een eerste Hostinger-deploy.">
-  <title>TD909 Deploy Test</title>
-  <style>
-    :root{color-scheme:dark;--bg:#101110;--panel:#171916;--line:#343b30;--accent:#d5fa76;--text:#f4f5ed;--muted:#b5beab}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}
-    .wrap{width:min(1060px,calc(100% - 40px));margin-inline:auto}
-    header,footer{padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-    header{border-bottom:1px solid var(--line)}
-    .brand{font-weight:900;letter-spacing:.08em}
-    .label,.edition{font:700 .75rem/1.4 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-    .label{color:var(--accent);margin:0}
-    .edition{color:var(--muted)}
-    .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center;padding:clamp(44px,9vw,108px) 0}
-    h1{font-size:clamp(3rem,9vw,7.25rem);letter-spacing:-.085em;line-height:.95;margin:14px 0 22px}
-    h1 span{display:block;color:var(--accent)}
-    .intro{color:var(--muted);max-width:36ch;margin:0 0 28px}
-    .button{display:inline-block;background:var(--accent);color:var(--bg);padding:11px 18px;font-weight:750;text-decoration:none;border-radius:5px}
-    .button:hover{background:#efffbf}
-    :focus-visible{outline:2px solid white;outline-offset:4px}
-    .mark{position:relative;display:grid;place-items:center;min-height:275px;overflow:hidden;background:repeating-linear-gradient(0deg,transparent 0 23px,#252a22 24px 25px),repeating-linear-gradient(90deg,var(--panel) 0 23px,#252a22 24px 25px);border:1px solid var(--line);border-radius:8px}
-    .mark svg{width:min(70%,220px);height:auto;color:var(--accent)}
-    .mark .edition{position:absolute;right:13px;bottom:10px}
-    .check{border-top:1px solid var(--line);padding:28px 0 32px}
-    .check h2{margin:6px 0 8px;font-size:1.55rem}
-    .check p:last-child{margin:0;color:var(--muted);max-width:64ch}
-    footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
-    @media(max-width:650px){.hero{grid-template-columns:1fr;gap:28px}.mark{min-height:190px}.mark svg{width:135px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="TD909 Creative Design, de onafhankelijke studio van Roger Amweg in Zoetermeer. Websites, grafisch ontwerp en elektronische muziek.">
+<meta name="theme-color" content="#191918">
+<title>TD909 Creative Design — Web, ontwerp & geluid</title>
+<style>
+:root{color-scheme:light;--paper:#f4efe5;--ink:#191918;--soft:#56534e;--orange:#fd7845;--line:#c9c0b3;--mono:ui-monospace,Consolas,monospace;--width:1200px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}a{color:inherit;text-underline-offset:.24em}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #bd3610;outline-offset:5px}.skip{position:absolute;z-index:2;left:16px;top:12px;transform:translateY(-180%);background:var(--paper);padding:10px}.skip:focus{transform:none}.wrap{width:min(var(--width),calc(100% - 80px));margin-inline:auto}.mono{font:700 .74rem/1.45 var(--mono);letter-spacing:.12em;text-transform:uppercase}.top{background:var(--ink);color:var(--paper)}.head{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;border-bottom:1px solid #504c46}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none}.brand strong{font-size:1.6rem;letter-spacing:-.09em;line-height:1}.brand span{font:700 .62rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase}.nav{display:flex;align-items:center;gap:clamp(12px,3vw,36px);flex-wrap:wrap}.nav a{text-decoration:none;font-size:.86rem;font-weight:700}.nav a:hover,.nav a:focus-visible{color:var(--orange)}.nav .contact-link{color:var(--orange)}
+.hero{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(24px,5vw,80px);align-items:center;padding:clamp(60px,8.8vw,128px) 0 72px}.eyebrow{display:flex;align-items:center;gap:9px;margin:0;color:#cbc0b0}.eyebrow::before{content:"";width:8px;height:8px;background:var(--orange);border-radius:50%;flex:none}.hero h1{margin:18px 0 23px;font-size:clamp(3.4rem,8vw,8rem);font-weight:850;line-height:.86;letter-spacing:-.09em}.hero h1 span{color:var(--orange);display:block}.hero p:not(.eyebrow){color:#d5cabc;max-width:38ch;margin:0 0 28px;font-size:clamp(1rem,1.5vw,1.15rem)}.cta{display:inline-flex;align-items:center;gap:17px;background:var(--orange);color:var(--ink);text-decoration:none;font-weight:800;padding:12px 17px;border:1px solid var(--orange)}.cta:hover{background:#ff9a74}.visual{border:1px solid #66564c;position:relative;padding:20px;aspect-ratio:1.1;display:grid;place-items:center;overflow:hidden;background:repeating-linear-gradient(0deg,transparent 0 31px,#342c27 31px 32px),repeating-linear-gradient(90deg,#211d1b 0 31px,#342c27 31px 32px)}.visual svg{width:100%;max-height:360px}.visual .mono{position:absolute;color:#e7aa90}.visual .figure-top{top:14px;left:15px}.visual .figure-bottom{bottom:14px;right:15px}.strip{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0;border-top:1px solid #504c46;color:#d0c4b5}.strip .accent{color:var(--orange)}
+.section{padding:clamp(58px,8vw,112px) 0}.section h2,.contact h2{font-size:clamp(2.8rem,6.6vw,6.2rem);line-height:.96;letter-spacing:-.082em;margin:10px 0 20px;font-weight:850}.section-head{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end;margin-bottom:34px}.section-head p{margin:0}.section-head .lead{max-width:39ch;color:var(--soft);padding-bottom:4px}.section-head h2{margin-bottom:0}.label{color:#853014}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}.filters[hidden],.project[hidden]{display:none}.filters button{border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;padding:6px 13px;font-size:.83rem;font-weight:750}.filters button[aria-pressed="true"],.filters button:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 22px}.project{border-bottom:1px solid var(--line);padding-bottom:18px}.art{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:230px;aspect-ratio:2;isolation:isolate;overflow:hidden}.art::after,.art::before{content:"";position:absolute;z-index:-1;pointer-events:none}.art b{font-size:clamp(2rem,5.3vw,5.4rem);letter-spacing:-.08em;line-height:.9}.art small{margin-top:12px}.star{background:#f2b9be;color:#342040}.star::after{width:160%;height:150%;border-radius:50%;border:1px solid #8c5d79;box-shadow:0 0 0 20px #f2b9be,0 0 0 21px #8c5d79;transform:rotate(-24deg)}.star b{font-family:Georgia,serif;font-style:italic}.griz{background:#c7e36c;color:#22241b}.griz::after{width:54%;aspect-ratio:1;border:2px solid #75882f;transform:rotate(45deg);box-shadow:0 0 0 18px #c7e36c,0 0 0 20px #75882f}.griz b{font-style:italic}.teckel{background:#ee9f4d;color:#302118}.teckel::after{inset:11px;border:1px solid #76441f;outline:1px solid #76441f;outline-offset:5px}.teckel b{font-family:Georgia,serif}.design{background:#25263b;color:#f0f0fb}.design::after{width:60%;aspect-ratio:1;transform:rotate(-22deg);background:repeating-linear-gradient(90deg,transparent 0 10px,#58598f 10px 12px)}.design b{color:#fcad80}.project h3{font-size:1.55rem;letter-spacing:-.04em;margin:6px 0}.project p{color:var(--soft);margin:0 0 12px;max-width:59ch}.project .meta{margin:12px 0 0}.project a,.project summary{font-size:.87rem;font-weight:800}.project details{margin-top:12px}.project summary{width:fit-content;cursor:pointer}.project details p{margin-top:8px}.split{border-top:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(25px,6vw,90px)}.split h2{max-width:9ch}.split .label{margin:0}.service{display:grid;grid-template-columns:36px 1fr;gap:15px;border-top:1px solid var(--line);padding:19px 0}.service:last-child{border-bottom:1px solid var(--line)}.service .mono{margin-top:7px}.service h3{margin:0 0 4px;font-size:1.28rem;letter-spacing:-.035em}.service p{margin:0;color:var(--soft);max-width:48ch}
+.sound{background:#26243a;color:#f8efe9}.sound .section{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:36px}.sound .label{color:#fdb492}.sound p{max-width:47ch}.sound h2{overflow-wrap:anywhere;font-size:clamp(2.5rem,5.6vw,5.4rem)}.sound p:not(.label){color:#ded2e4}.tracklist{border-top:1px solid #666077;margin-top:8px}.track{display:grid;grid-template-columns:34px 1fr;gap:10px;border-bottom:1px solid #666077;padding:14px 0}.track span:first-child{color:#ffb99b}.track strong{display:block;font-size:1rem}.track small{color:#ded2e4}.sound a{display:inline-block;margin-top:12px;font-weight:800;color:#ffd4bd}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}.about p{max-width:52ch;color:var(--soft);margin:0 0 14px}.about .label{color:#853014}.contact{background:var(--orange);padding:clamp(46px,7vw,88px) 0}.contact-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end}.contact h2{margin-bottom:0}.contact p{max-width:36ch;margin:0 0 13px}.contact a{font-weight:850;overflow-wrap:anywhere}.foot{background:var(--ink);color:var(--paper);padding:18px 0}.foot .wrap{display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap}
+@media(max-width:850px){.wrap{width:calc(100% - 48px)}.hero{gap:24px}.hero h1{font-size:clamp(3.4rem,9vw,6rem)}.visual{padding:12px}.art{min-height:180px}}
+@media(max-width:660px){.wrap{width:calc(100% - 32px)}.head{align-items:flex-start;flex-direction:column;justify-content:center;gap:12px;padding:14px 0}.nav{gap:16px}.hero,.section-head,.projects,.split,.sound .section,.about,.contact-inner{grid-template-columns:1fr}.hero{padding:46px 0 30px}.hero h1{font-size:clamp(3rem,14vw,5.2rem)}.visual{aspect-ratio:1.5}.visual svg{max-height:220px}.section-head{gap:13px}.art b{font-size:clamp(2.7rem,10vw,4.5rem)}.strip{font-size:.63rem}.sound .section{gap:18px}.about{gap:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <span class="brand">TD909 / CREATIVE DESIGN</span>
-      <span class="edition">Test 001</span>
-    </header>
-    <main>
-      <section class="hero" aria-labelledby="title">
-        <div>
-          <p class="label">Deploymenttest</p>
-          <h1 id="title">TD909 <span>Deploy Test</span></h1>
-          <p class="intro">Een kleine testsite voor je eerste deployment van GitHub naar Hostinger.</p>
-          <a class="button" href="#controle">Bekijk de testcontrole ↓</a>
-        </div>
-        <div class="mark" aria-hidden="true">
-          <svg viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square">
-            <path d="M62 35 28 70l34 35m96-70 34 35-34 35M125 26l-30 88"/>
-            <circle cx="110" cy="70" r="64" stroke-width="1" stroke-dasharray="3 6" opacity=".55"/>
-          </svg>
-          <span class="edition">Build 03</span>
-        </div>
-      </section>
-      <section class="check" id="controle" aria-labelledby="check-title">
-        <p class="label">Controlepunt</p>
-        <h2 id="check-title">Pagina geladen</h2>
-        <p>Zie je deze pagina op je tijdelijke Hostinger-adres? Dan wordt de HTML daar geserveerd. Zie je ook de groene accenten en het raster? Dan wordt de styling toegepast.</p>
-      </section>
-    </main>
-    <footer><span>TD909 Creative Design</span><span class="edition">Statische HTML &amp; CSS</span></footer>
-  </div>
+<a class="skip" href="#inhoud">Direct naar inhoud</a>
+<div class="top" id="boven">
+<header class="wrap head">
+<a class="brand" href="#boven" aria-label="TD909 Creative Design, bovenaan"><strong>TD909</strong><span>Creative<br>Design</span></a>
+<nav class="nav" aria-label="Hoofdnavigatie"><a href="#werk">Werk</a><a href="#diensten">Diensten</a><a href="#muziek">Muziek</a><a href="#over">Over</a><a class="contact-link" href="#contact">Contact ↗</a></nav>
+</header>
+</div>
+<main id="inhoud">
+<div class="top">
+<section class="wrap hero" aria-labelledby="hero-title">
+<div>
+<p class="eyebrow mono">Onafhankelijke studio · Zoetermeer</p>
+<h1 id="hero-title">Web, ontwerp <span>&amp; geluid.</span></h1>
+<p>Ik ben Roger Amweg. Ik bouw websites, ontwerp grafisch werk en maak elektronische muziek als Th3D0dg3r909.</p>
+<a class="cta" href="#werk">Bekijk mijn werk <span aria-hidden="true">↘</span></a>
+</div>
+<div class="visual" aria-hidden="true">
+<span class="mono figure-top">TD909 / Studio</span>
+<svg viewBox="0 0 400 340" fill="none" aria-hidden="true">
+<defs><radialGradient id="glow"><stop stop-color="#fd7845" stop-opacity=".32"/><stop offset="1" stop-color="#fd7845" stop-opacity="0"/></radialGradient></defs>
+<circle cx="200" cy="170" r="150" fill="url(#glow)"/>
+<circle cx="200" cy="170" r="117" stroke="#a55336"/>
+<circle cx="200" cy="170" r="103" stroke="#a55336" stroke-dasharray="2 6"/>
+<circle cx="200" cy="170" r="85" stroke="#a55336"/>
+<circle cx="200" cy="170" r="54" stroke="#a55336"/>
+<circle cx="200" cy="170" r="23" stroke="#a55336"/>
+<path d="M28 170h344M200 22v296" stroke="#a55336" stroke-dasharray="3 6"/>
+<path d="M29 171h71l14-22 17 43 21-83 20 120 28-151 25 157 22-114 19 77 19-50 15 23h71" stroke="#fd7845" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="200" cy="78" r="5" fill="#f4efe5"/><circle cx="225" cy="235" r="5" fill="#f4efe5"/>
+</svg>
+<span class="mono figure-bottom">Web / Design / Audio</span>
+</div>
+</section>
+<div class="wrap strip mono"><span>Webdesign &amp; development</span><span>Grafisch ontwerp</span><span>DJ &amp; productie</span><span class="accent">TD909 © 2026</span></div>
+</div>
+<section class="wrap section" id="werk" aria-labelledby="werk-title">
+<div class="section-head"><div><p class="mono label">01 / Portfolio</p><h2 id="werk-title">Geselecteerd werk.</h2></div><p class="lead">Van een WooCommerce-webshop tot een platform voor honkbaltoernooien. Per project lees je wat ik eraan heb gedaan.</p></div>
+<div class="filters" aria-label="Filter projecten" role="group" hidden><button type="button" data-filter="all" aria-pressed="true">Alles</button><button type="button" data-filter="web" aria-pressed="false">Websites</button><button type="button" data-filter="shop" aria-pressed="false">Webshops</button><button type="button" data-filter="design" aria-pressed="false">Ontwerp</button></div>
+<div class="projects">
+<article class="project" data-category="web shop"><div class="art star" aria-hidden="true"><b>Star-Box</b><small class="mono">WooCommerce / Webshop</small></div><p class="mono label meta">Webshop · Technische ontwikkeling</p><h3>Star-Box</h3><p>Webshop voor natuurlijke hondensnacks. Mijn werk omvatte de migratie, inrichting van WooCommerce en maatwerk voor onder meer de shop en de checkout.</p><a href="https://star-box.nl/">Bekijk Star-Box ↗</a></article>
+<article class="project" data-category="web"><div class="art griz" aria-hidden="true"><b>Grizzlies</b><small class="mono">Baseball / Tournament platform</small></div><p class="mono label meta">Webapp · Toernooiplatform</p><h3>Grizzlies Tournament Platform</h3><p>Een herbruikbare toernooiapp voor Grizzlies Zoetermeer, met wedstrijdschema’s, uitslagen, standen en teaminformatie.</p><a href="https://grizzlies-tournament-platform-373114.hostingersite.com/">Bekijk het platform ↗</a></article>
+<article class="project" data-category="web shop"><div class="art teckel" aria-hidden="true"><b>Teckelbier</b><small class="mono">Eigen project / Seizoensverkoop</small></div><p class="mono label meta">Eigen project · Webshop</p><h3>Teckelbier</h3><p>Mijn eigen webshop voor de jaarlijkse verkoop rond de Dag van de Nederlandse Teckel in Zoetermeer.</p><a href="https://teckelbier.nl/">Bekijk Teckelbier ↗</a></article>
+<article class="project" data-category="design"><div class="art design" aria-hidden="true"><b>Baseball<br>visuals</b><small class="mono">Grafisch ontwerp / Clubcommunicatie</small></div><p class="mono label meta">Grafisch ontwerp · Grizzlies Zoetermeer</p><h3>Van poster tot social post</h3><p>Posters, flyers en social visuals voor clubcommunicatie, werving en toernooien van Grizzlies Zoetermeer.</p><details><summary>Meer over het ontwerpwerk</summary><p>Een ontwerp moet werken op de club én op een telefoonscherm. De uitwerking verschilt per kanaal, met dezelfde herkenbare clubstijl.</p></details></article>
+</div>
+</section>
+<section class="wrap section split" id="diensten" aria-labelledby="diensten-title">
+<div><p class="mono label">02 / Diensten</p><h2 id="diensten-title">Wat ik voor je maak.</h2></div>
+<div>
+<div class="service"><span class="mono label">01</span><div><h3>Websites &amp; webshops</h3><p>Van een compacte bedrijfssite tot een WordPress- of WooCommerce-site met ruimte om zelf content bij te houden.</p></div></div>
+<div class="service"><span class="mono label">02</span><div><h3>Posters, flyers &amp; social</h3><p>Grafisch werk voor evenementen, verenigingen en campagnes, afgestemd op print, socials of allebei.</p></div></div>
+<div class="service"><span class="mono label">03</span><div><h3>Technisch beheer</h3><p>Onderhoud, contentupdates en technische ondersteuning. Dat doe ik onder meer voor <a href="https://thirtyfive.nl/">ThirtyFive</a>, <a href="https://masterdrive.nl/">Masterdrive</a> en <a href="https://grizzlies-zoetermeer.nl/">Grizzlies Zoetermeer</a>.</p></div></div>
+</div>
+</section>
+<div class="sound">
+<section class="wrap section" id="muziek" aria-labelledby="muziek-title">
+<div><p class="mono label">03 / Achter de decks</p><h2 id="muziek-title">Th3D0dg3r909</h2><p>Onder deze naam draai ik en produceer ik elektronische muziek. Op SoundCloud staan mijn eigen tracks en sets, van house tot drum &amp; bass en hardcore.</p><a href="https://soundcloud.com/thedodger909">Luister op SoundCloud ↗</a></div>
+<div class="tracklist" aria-label="Selectie van tracks en mixes">
+<div class="track"><span class="mono">01</span><div><strong>Borderless Hardcore</strong><small>Productie</small></div></div>
+<div class="track"><span class="mono">02</span><div><strong>Live bij House35</strong><small>DJ-set · ThirtyFive, Zoetermeer</small></div></div>
+<div class="track"><span class="mono">03</span><div><strong>Drum n Bass Mix 2024</strong><small>DJ-mix</small></div></div>
+</div>
+</section>
+</div>
+<section class="wrap section about" id="over" aria-labelledby="over-title"><div><p class="mono label">04 / De studio</p><h2 id="over-title">Hoi, ik ben Roger.</h2></div><div><p>TD909 Creative Design is mijn onafhankelijke studio in Zoetermeer. Ik combineer mijn technische achtergrond met grafisch ontwerp en muziek.</p><p>Je werkt rechtstreeks met mij. Van een eerste idee tot de livegang, en ook daarna als je hulp nodig hebt met je site.</p></div></section>
+<section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner"><div><p class="mono">05 / Contact</p><h2 id="contact-title">Samen iets maken?</h2></div><div><p>Vertel me waar je aan werkt. Voor een website, ontwerp of DJ-boeking kun je me rechtstreeks mailen.</p><a href="mailto:info@td909-creativedesign.nl">info@td909-creativedesign.nl ↗</a></div></div></section>
+</main>
+<footer class="foot"><div class="wrap"><span class="mono">© 2026 TD909 Creative Design</span><a class="mono" href="#boven">Terug naar boven ↑</a></div></footer>
+<script>
+const filters = document.querySelector('.filters');
+const projects = document.querySelectorAll('.project');
+filters.hidden = false;
+filters.addEventListener('click', (event) => {
+  const selected = event.target.closest('button[data-filter]');
+  if (!selected) return;
+  const filter = selected.dataset.filter;
+  filters.querySelectorAll('button').forEach((button) => {
+    button.setAttribute('aria-pressed', String(button === selected));
+  });
+  projects.forEach((project) => {
+    project.hidden = filter !== 'all' && !project.dataset.category.split(' ').includes(filter);
+  });
+});
+</script>
 </body>
 </html>
